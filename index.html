@@ -1,0 +1,227 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Web Gallery with AMP</title>
+    <link rel="canonical" href="index.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Open-source framework for publishing content",
+            "datePublished": "2015-10-07T12:02:41Z",
+            "image": [
+                "logo.jpg"
+            ]
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        }
+
+        .container {
+            -webkit-animation: bgBody 1s steps(100, end) 0s 1 normal both;
+            -moz-animation: bgBody 1s steps(100, end) 0s 1 normal both;
+            -ms-animation: bgBody 1s steps(100, end) 0s 1 normal both;
+            -ms-animation: bgBody 1s steps(100, end) 0s 1 normal both;
+            animation: bgBody 1s steps(100, end) 0s 1 normal both;
+        }
+        
+        @-webkit-keyframes -amp-start {from {visibility: hidden}to {visibility: visible}}
+        @-moz-keyframes -amp-start {from {visibility: hidden}to {visibility: visible}}
+        @-ms-keyframes -amp-start {from {visibility: hidden}to {visibility: visible}}
+        @-o-keyframes -amp-start {from {visibility: hidden}to {visibility: visible}}
+        @keyframes -amp-start {from {visibility: hidden}to {visibility: visible}}
+
+        @-webkit-keyframes bgBody {from {opacity: 0}to {opacity: 1}}
+        @-moz-keyframes bgBody {from {opacity: 0}to {opacity: 1}}
+        @-ms-keyframes bgBody {from {opacity: 0}to {opacity: 1}}
+        @-o-keyframes bgBody {from {opacity: 0}to {opacity: 1}}
+        @keyframes bgBody {from {opacity: 0}to {opacity: 1}}
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        
+
+
+        html, body {
+            
+            text-align: center;
+            color: #FFFFFF;
+
+            font-family: sans-serif;
+
+            height: 100%!important;
+            width: 100%;
+            display: block;
+            margin: 0 auto !important;
+            padding: 0;
+            
+            
+        }
+
+        .img-viewer-container {
+            background-color: #333333;
+            padding-bottom: 2em;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        body > amp-img {
+            background-color: gray;
+            border: 1px solid black;
+        }
+        
+        .img-container-lg {
+            width: 1100px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .img-container-lg amp-img,
+        .img-container-sm amp-img {
+            float: left;
+            margin-left: 100px;
+            margin-top: 100px;
+            cursor: pointer;
+            transition: box-shadow .45s;
+        }
+
+        .img-container-lg amp-img:hover,
+        .img-container-sm amp-img:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        }
+        
+        .img-container-lg amp-img:nth-child(4n-3),
+        .img-container-sm amp-img:nth-child(2n-1) {
+            margin-left: 0px;
+        }
+        
+        .img-container-sm {
+            width: 500px;
+            display: none;
+            margin: 0 auto;
+        }
+
+        #img-viewer-sm {
+            display: none;
+            margin: 0 auto;
+        }
+
+        #img-viewer-lg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            clear: both;
+            display: block;
+            height: 2em;
+            padding-top: 0.5em;
+            margin-top: 3em;
+            width: 100%;
+            background-color: #333333;
+        }
+
+        footer > amp-img {
+            display: inline-block;
+        }
+        
+        @media screen and (max-width:1100px) {
+            .img-container-lg {
+                display: none;
+            }
+            .img-container-sm {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            h1 {
+                font-size: 125%;;
+            }
+
+            #img-viewer-sm {
+                display: block;
+            }
+
+            #img-viewer-lg {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-viewer-container">
+            <h1>Welcome to the mobile web gallery !</h1>
+            <amp-img id="img-viewer-lg" src="http://www.w3schools.com/css/img_fjords.jpg" alt="Welcome" height="400" width="800"></amp-img>
+            <amp-img id="img-viewer-sm" layout="responsive" src="http://www.w3schools.com/css/img_fjords.jpg" alt="Welcome" height="400" width="800"></amp-img>
+        </div>
+        <span class="img-container img-container-lg" layout="fixed" width="1100" height="600"><!--
+            --><amp-img src="http://www.w3schools.com/css/img_fjords.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://static.pexels.com/photos/36487/above-adventure-aerial-air.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://cdn.spacetelescope.org/archives/images/publicationjpg/heic0602a.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="http://wowslider.com/sliders/demo-85/data1/images/southtyrol350698.jpg"height="200" width="200"></amp-img><!--
+        --></span><!--
+        --><span class="img-container img-container-sm" layout="fixed" width="500" height="1800"><!--
+            --><amp-img src="http://www.w3schools.com/css/img_fjords.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://static.pexels.com/photos/36487/above-adventure-aerial-air.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="https://cdn.spacetelescope.org/archives/images/publicationjpg/heic0602a.jpg"height="200" width="200"></amp-img><!--
+            --><amp-img src="http://wowslider.com/sliders/demo-85/data1/images/southtyrol350698.jpg"height="200" width="200"></amp-img><!--
+        --></span>
+
+        <footer>
+            Powered by <amp-img height="1em" width="3em" src="https://www.ampproject.org/static/img/logo-blue.svg"></amp-img> ! Images were taken randomly from Google Images (link are in the code)
+        </footer>
+    </div>
+
+    
+
+    <script type="text/javascript">
+        var imgs = document.querySelectorAll(".img-container > amp-img");
+
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].addEventListener('click', function () {
+                if(document.querySelector("#img-viewer-sm img") != null){
+                    document.querySelector("#img-viewer-sm").setAttribute("src", this.getAttribute("src"));
+                    document.querySelector("#img-viewer-sm img").setAttribute("src", this.getAttribute("src"));
+                }
+                if(document.querySelector("#img-viewer-lg img") != null){
+                    document.querySelector("#img-viewer-lg").setAttribute("src", this.getAttribute("src"));
+                    document.querySelector("#img-viewer-lg img").setAttribute("src", this.getAttribute("src"));
+
+                }
+                
+            });
+        }
+    </script>
+</body>
+
+</html>
